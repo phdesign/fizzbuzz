@@ -5,7 +5,8 @@
   "author": "Paul Heasley <paul@phdesign.com.au>",
   "license": "MIT",
   "scripts": {
-    "test": "ava --verbose"
+    "test": "ava --verbose",
+    "start": "node -r esm index.js"
   },
   "devDependencies": {
     "ava": "^0.25.0",
