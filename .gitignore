@@ -1,0 +1,11 @@
+node_modules
+.*.swp
+._*
+.DS_Store
+.hg
+.lock-wscript
+.svn
+.wafpickle-*
+config.gypi
+CVS
+*.log
