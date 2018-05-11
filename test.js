@@ -31,21 +31,33 @@ test('should return an iterator with 100 values', t => {
   t.is(i, 100);
 });
 
-test('should return an iterator where every value divisible by 3 is "Fizz"', t => {
+test('should return an iterator where every value divisible by 3 but not 5 is "Fizz"', t => {
   const fb = fizzBuzz();
   let i = 1;
   for (let val of fb) {
-    if (i++ % 3 === 0)
+    if (i % 3 === 0 && i % 5 !== 0)
       t.is(val, "Fizz");
+    i++;
   }
 });
 
-test('should return an iterator where every value divisible by 5 is "Buzz"', t => {
+test('should return an iterator where every value divisible by 5 but not 3 is "Buzz"', t => {
   const fb = fizzBuzz();
   let i = 1;
   for (let val of fb) {
-    if (i++ % 5 === 0)
-      t.is(val, "Buzz", `Expected element at ${i} to be "Buzz"`);
+    if (i % 5 === 0 && i % 3 !== 0)
+      t.is(val, "Buzz", `Expected element at ${i-1} to be "Buzz"`);
+    i++;
+  }
+});
+
+test('should return an iterator where every value divisible by 5 and 3 is "FizzBuzz"', t => {
+  const fb = fizzBuzz();
+  let i = 1;
+  for (let val of fb) {
+    if (i % 5 === 0 && i % 3 === 0)
+      t.is(val, "FizzBuzz", `Expected element at ${i-1} to be "FizzBuzz"`);
+    i++;
   }
 });
 
