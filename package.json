@@ -1,5 +1,6 @@
 {
   "name": "fizzbuzz",
+  "description": "An implementation of FizzBuzz using TDD in ES6 nodejs",
   "version": "1.0.0",
   "main": "src/index.js",
   "author": "Paul Heasley <paul@phdesign.com.au>",
